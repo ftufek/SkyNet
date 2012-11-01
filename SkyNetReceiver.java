@@ -6,8 +6,6 @@ import java.util.ArrayList;
 
 import lejos.nxt.comm.Bluetooth;
 import lejos.nxt.comm.NXTConnection;
-import lejos.nxt.comm.RS485;
-import lejos.nxt.comm.RS485Connection;
 
 public class SkyNetReceiver extends Thread {	
 	private static DataOutputStream oStream;
