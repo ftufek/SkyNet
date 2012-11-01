@@ -13,12 +13,12 @@ public class SkyNetReceiver extends Thread {
 	
 	private static DataOutputStream oStream;
 	
-	ArrayList<Integer> messageQueue;
-	ArrayList<Integer> receivedMessageQueue;
+	ArrayList<String> messageQueue;
+	ArrayList<String> receivedMessageQueue;
 	
 	public SkyNetReceiver(){
-		messageQueue = new ArrayList<Integer>();
-		receivedMessageQueue = new ArrayList<Integer>();
+		messageQueue = new ArrayList<String>();
+		receivedMessageQueue = new ArrayList<String>();
 	}
 	
 	public void run(){
@@ -32,7 +32,7 @@ public class SkyNetReceiver extends Thread {
 
 		while(true){
 			try {
-				int command = iStream.readInt();
+				String command = iStream.readUTF();
 				receivedMessageQueue.add(command);
 			} catch (IOException e) {
 				System.out.println("Error reading from bluetooth!");
