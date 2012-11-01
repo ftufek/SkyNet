@@ -9,9 +9,7 @@ import lejos.nxt.comm.NXTConnection;
 import lejos.nxt.comm.RS485;
 import lejos.nxt.comm.RS485Connection;
 
-public class SkyNetReceiver extends Thread {
-	private int CONNECTION_TIMEOUT = 50000;
-	
+public class SkyNetReceiver extends Thread {	
 	private static DataOutputStream oStream;
 	
 	ArrayList<String> messageQueue;
