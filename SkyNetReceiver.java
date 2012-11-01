@@ -18,6 +18,8 @@ public class SkyNetReceiver extends Thread {
 	public SkyNetReceiver(){
 		messageQueue = new ArrayList<String>();
 		receivedMessageQueue = new ArrayList<String>();
+		
+		this.start();
 	}
 	
 	public void run(){
