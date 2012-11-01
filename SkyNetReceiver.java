@@ -44,11 +44,11 @@ public class SkyNetReceiver extends Thread {
 		while(oStream == null);
 	}
 	
-	public static void sendMessage(int command){
+	public static void sendMessage(String command){
 		System.out.println("Sending message: "+command);
 		if(oStream == null)return;
 		try{
-			oStream.writeInt(command);
+			oStream.writeUTF(command);
 			oStream.flush();
 		}catch(IOException e){
 			System.out.println("Couldn't write to remote!");
