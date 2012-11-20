@@ -1,4 +1,4 @@
 SkyNet
 ======
 
-A SuperCommunication from PC/Phone to NXT
+Bluetooth command receiver for lejos NXT brick.

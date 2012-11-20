@@ -21,9 +21,6 @@ public class SkyNetReceiver extends Thread {
 	}
 	
 	public void run(){
-		//We're controlling the slave brick
-		//All it does is wait message from the master brick
-		//and execute commands based on these messages
 		NXTConnection connection = Bluetooth.waitForConnection();
 		oStream = connection.openDataOutputStream();
 		DataInputStream iStream = connection.openDataInputStream();		
